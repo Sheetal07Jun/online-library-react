@@ -1,12 +1,54 @@
-# React + Vite
+# 📚 Online Library React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Project Overview
 
-Currently, two official plugins are available:
+The Online Library Application is a modern React-based web application that allows users to browse, search, filter, and manage books dynamically. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates the implementation of dynamic routing, Redux state management, category filtering, search functionality, and a clean responsive user interface.
 
-## Expanding the ESLint configuration
+The application follows a structured architecture separating preview and full browsing functionality, similar to real-world applications.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Problem Statement Implementation
+
+This project fulfills the following requirements:
+
+- Implement a dynamic route that displays detailed information about a selected book.
+- Display a list of books filtered by category.
+- Implement search functionality to filter books by title or author.
+- Use Redux for centralized state management.
+- Provide an Add Book feature to update the state dynamically.
+- Implement proper routing using React Router.
+- Handle invalid routes using a 404 page.
+- Maintain clean UI and responsive layout.
+
+---
+
+##  Features
+
+-  Home Page with preview of popular books
+-  Category-based filtering (Fiction, Sci-Fi, Non-Fiction)
+-  Real-time search by title or author
+-  Sorting (Title A–Z, Rating High–Low)
+-  Star rating display UI
+-  Dynamic Book Details page using route parameter
+-  Add Book form with Redux state update
+-  Result count display
+-  404 Page for invalid routes
+-  Modern UI with gradient design
+
+---
+
+##  Tech Stack
+
+- React (Vite)
+- Redux Toolkit
+- React Router DOM
+- CSS (Custom Styling)
+
+---
+
+##  Dynamic Routing
+
+The application uses dynamic routing:
