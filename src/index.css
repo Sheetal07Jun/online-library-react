@@ -172,6 +172,8 @@ body {
 .button:hover {
   background: #1f2937;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(79,70,229,0.4);
 }
 
 /* ================= BOOK DETAILS ================= */
