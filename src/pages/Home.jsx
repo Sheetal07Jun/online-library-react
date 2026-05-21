@@ -1,3 +1,5 @@
+// Updated Home component UI improvements
+
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
