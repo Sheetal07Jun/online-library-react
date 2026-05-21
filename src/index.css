@@ -129,7 +129,7 @@ body {
   text-align: center;
 }
 
-/* ================= GENERAL BOOK CARD (Browse Page) ================= */
+/* ============== GENERAL BOOK CARD (Browse Page) =========== */
 
 .book-card {
   background: white;
@@ -154,7 +154,7 @@ body {
   border-radius: 10px;
 }
 
-/* ================= BUTTON ================= */
+/* =========== BUTTON ========== */
 
 
 .button {
@@ -176,7 +176,7 @@ body {
   box-shadow: 0 8px 20px rgba(79,70,229,0.4);
 }
 
-/* ================= BOOK DETAILS ================= */
+/* =========== BOOK DETAILS ========= */
 
 .details-card {
   display: flex;
@@ -222,7 +222,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ================= BROWSE SEARCH ================= */
+/* ===== BROWSE SEARCH ===== */
 
 .search-input {
   width: 100%;
@@ -239,7 +239,7 @@ body {
   box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
 }
 
-/* ================= ADD BOOK FORM ================= */
+/* ===== ADD BOOK FORM ====== */
 
 .form-card {
   max-width: 600px;
