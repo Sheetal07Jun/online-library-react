@@ -97,6 +97,7 @@ function BrowseBooks() {
                                 <p>{book.author}</p>
 
                                 {/* STAR RATING */}
+                                
                                 <p style={{ color: "#facc15", margin: "8px 0" }}>
                                     {"⭐".repeat(book.rating)}
                                 </p>
