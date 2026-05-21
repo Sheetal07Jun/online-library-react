@@ -1,3 +1,5 @@
+// BrowseBooks page with filtering, search, sorting and result count
+
 import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState } from "react";
