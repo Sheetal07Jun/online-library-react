@@ -9,7 +9,7 @@ function BrowseBooks() {
     const [search, setSearch] = useState("");
     const [sortOption, setSortOption] = useState("");
 
-    // Step 1: Category filtering (if category exists)
+    /* ---------------- CATEGORY FILTER ---------------- */
     const categoryFiltered = category
         ? books.filter(
             (book) =>
@@ -17,14 +17,14 @@ function BrowseBooks() {
         )
         : books;
 
-    // Step 2: Search filtering
+    /* ---------------- SEARCH FILTER ---------------- */
     const filteredBooks = categoryFiltered.filter(
         (book) =>
             book.title.toLowerCase().includes(search.toLowerCase()) ||
             book.author.toLowerCase().includes(search.toLowerCase())
     );
 
-    // Step 3: Sorting
+    /* ---------------- SORTING ---------------- */
     let sortedBooks = [...filteredBooks];
 
     if (sortOption === "az") {
@@ -40,7 +40,7 @@ function BrowseBooks() {
             {/* HERO SECTION */}
             <div className="hero-section">
                 <h1>
-                    📚 {category ? category.toUpperCase() : "All"} Books
+                    📚 {category ? category.toUpperCase() : "ALL"} Books
                 </h1>
                 <p>Browse and discover amazing reads</p>
             </div>
@@ -48,7 +48,7 @@ function BrowseBooks() {
             {/* CONTENT SECTION */}
             <div className="content-section">
 
-                {/* SEARCH */}
+                {/* SEARCH INPUT */}
                 <input
                     type="text"
                     placeholder="Search by title or author..."
@@ -57,14 +57,15 @@ function BrowseBooks() {
                     onChange={(e) => setSearch(e.target.value)}
                 />
 
-                {/* SORTING DROPDOWN */}
+                {/* SORT DROPDOWN */}
                 <select
                     value={sortOption}
                     onChange={(e) => setSortOption(e.target.value)}
                     style={{
                         marginBottom: "20px",
                         padding: "10px",
-                        borderRadius: "8px"
+                        borderRadius: "8px",
+                        border: "1px solid #ccc"
                     }}
                 >
                     <option value="">Sort By</option>
@@ -73,7 +74,7 @@ function BrowseBooks() {
                 </select>
 
                 {/* RESULT COUNT */}
-                <p style={{ marginBottom: "20px", fontWeight: "500" }}>
+                <p style={{ marginBottom: "20px", fontWeight: "600" }}>
                     {sortedBooks.length} book
                     {sortedBooks.length !== 1 && "s"} found
                 </p>
@@ -93,8 +94,10 @@ function BrowseBooks() {
                                 <h3>{book.title}</h3>
                                 <p>{book.author}</p>
 
-                                {/* STAR RATING UI */}
-                                <p>{"⭐".repeat(book.rating)}</p>
+                                {/* STAR RATING */}
+                                <p style={{ color: "#facc15", margin: "8px 0" }}>
+                                    {"⭐".repeat(book.rating)}
+                                </p>
 
                                 <Link to={`/book/${book.id}`}>
                                     <button className="button">
@@ -107,7 +110,7 @@ function BrowseBooks() {
                     ))}
                 </div>
 
-                {/* NO BOOKS MESSAGE */}
+                {/* NO BOOKS FOUND MESSAGE */}
                 {sortedBooks.length === 0 && (
                     <p style={{ textAlign: "center", marginTop: "30px" }}>
                         No books found.
