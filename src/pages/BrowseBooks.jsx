@@ -97,7 +97,7 @@ function BrowseBooks() {
                                 <p>{book.author}</p>
 
                                 {/* STAR RATING */}
-                                
+
                                 <p style={{ color: "#facc15", margin: "8px 0" }}>
                                     {"⭐".repeat(book.rating)}
                                 </p>
@@ -115,7 +115,10 @@ function BrowseBooks() {
 
                 {/* NO BOOKS FOUND MESSAGE */}
                 {sortedBooks.length === 0 && (
-                    <p style={{ textAlign: "center", marginTop: "30px" }}>
+                    <p style={{
+                        textAlign: "center", marginTop: "40px", fontWeight: "600",
+                        color: "#ef4444"
+                    }}>
                         No books found.
                     </p>
                 )}
